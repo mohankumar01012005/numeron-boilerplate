@@ -1,1 +1,10 @@
 // Iteration 5: Store the player score and display it on the game over screen
+let score_box = document.getElementById("score-board");
+let Play_btn = document.getElementById("play-again-button");
+let value = localStorage.getItem("score");
+
+score_box.textContent = value;
+Play_btn.addEventListener("click", redirect);
+function redirect(){
+  location.href='./game.html'
+}
